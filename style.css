@@ -1,0 +1,28 @@
+.about-me {
+  justify-content: center;
+}
+
+#profile-pic {
+  max-width: 300px;
+  float: left;
+  padding: 10px;
+}
+
+.bio-info > table {
+  margin: auto;
+  text-align: center;
+}
+
+@media screen and (max-width: 650px) {
+  .bio-info {
+    clear: both;
+  }
+}
+
+.profile {
+  clear: both;
+}
+
+.card {
+  max-width: 18rem;
+}
