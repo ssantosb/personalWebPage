@@ -1,46 +1,30 @@
 import React from "react";
 import "./App.css";
+import Navbar from "react-bootstrap/Navbar";
+import Nav from "react-bootstrap/Nav";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faWhatsapp, faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+
+import { Chart } from "react-charts";
 
 const navbar = () => {
   return (
-    <nav className="navbar navbar-expand-md navbar-light bg-light">
-      <button
-        className="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span className="navbar-toggler-icon"></span>
-      </button>
+    <Navbar bg="dark" variant="dark" expand="md">
+      <Navbar.Brand href="#">MHR</Navbar.Brand>
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
-      <div className="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul className="navbar-nav mr-auto">
-          <li className="nav-item active">
-            <a className="nav-link" href="#profile">
-              Profile
-            </a>
-          </li>
-          <li className="nav-item active">
-            <a className="nav-link" href="#academic-info">
-              Academic info
-            </a>
-          </li>
-          <li className="nav-item active">
-            <a className="nav-link" href="#projects">
-              Projects
-            </a>
-          </li>
-          <li className="nav-item active">
-            <a className="nav-link" href="#hobbies">
-              Hobbies
-            </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+      <Navbar.Collapse>
+        <Nav className="mr-auto">
+          <Nav.Link href="#profile">Profile</Nav.Link>
+          <Nav.Link href="#academic-info">Academic info</Nav.Link>
+          <Nav.Link href="#projects">Projects</Nav.Link>
+          <Nav.Link href="#hobbies">Hobbies</Nav.Link>
+          <Nav.Link href="#footer">Contact</Nav.Link>
+        </Nav>
+      </Navbar.Collapse>
+    </Navbar>
   );
 };
 
@@ -51,20 +35,19 @@ const aboutMe = () => {
       <img id="profile-pic" src="./profile-picture.jpg" alt="profile" />
       <div>
         <div className="bio-info">
-          <table>
-            <tr>
-              <th id="birthday">Birthday</th>
-              <td>21 de octubre de 1997</td>
-            </tr>
-            <tr>
-              <th id="current-workplace">Current workplace</th>
-              <td>Universidad de los Andes</td>
-            </tr>
-            <tr>
-              <th id="location">Location</th>
-              <td>Bogotá, Colombia</td>
-            </tr>
-          </table>
+          <dl>
+            <dt>Birthday</dt>
+            <dd>October 21'st 1997</dd>
+
+            <dt id="current-job">Current job</dt>
+            <dd>Systems and computer engineering student</dd>
+
+            <dt id="current-workplace">Current workplace</dt>
+            <dd>Universidad de los Andes</dd>
+
+            <dt id="location">Location</dt>
+            <dd>Bogotá, Colombia</dd>
+          </dl>
         </div>
       </div>
     </div>
@@ -88,7 +71,7 @@ const profile = () => {
       <h3>Experience</h3>
       <dl>
         <h4>Tecniruedas</h4>
-        <dt>Fullstack developer</dt>
+        <dt>Freelance fullstack developer</dt>
         <dd>2018-Present</dd>
 
         <h4>Suira</h4>
@@ -114,17 +97,42 @@ const academic = () => {
           2016-2021
         </dd>
         <dt>School</dt>
-        Colegio Anglo Colombiano
-        <br />
-        Bogotá, Colombia
-        <br />
-        2002-2016
+        <dd>
+          Colegio Anglo Colombiano
+          <br />
+          Bogotá, Colombia
+          <br />
+          2002-2016
+        </dd>
         <dt>Other</dt>
         <dd>
-          Hult University-2015
-          <br /> London, UK
+          Hult University
+          <br />
+          Pre-university
+          <br />
+          London, UK
+          <br />
+          2015
+        </dd>
+        <dd>
+          Johns Hopkins
+          <br />
+          CTY - The Mathematics of Money
+          <br />
+          Rhode Island, US
+          <br />
+          2014
         </dd>
       </dl>
+    </div>
+  );
+};
+
+const skills = (data, series, axes) => {
+  return (
+    <div className="skills">
+      <h2>Skills</h2>
+      <Chart data={data} series={series} axes={axes} tooltip dark />
     </div>
   );
 };
@@ -134,7 +142,7 @@ const projects = () => {
     <div className="projects" id="projects">
       <h2>Projects</h2>
       <div className="card-deck">
-        <div className="card">
+        <div className="card bg-secondary">
           <div className="card-body">
             <h5 className="card-title">Proyect 1</h5>
             <p className="card-text">
@@ -147,7 +155,7 @@ const projects = () => {
           </div>
         </div>
 
-        <div className="card">
+        <div className="card bg-secondary">
           <div className="card-body">
             <h5 className="card-title">Proyect 2</h5>
             <p className="card-text">
@@ -167,34 +175,53 @@ const projects = () => {
 const hobbies = () => {
   return (
     <div className="hobbies" id="hobbies">
-      <div className="sitios-interes" id="sitios-interes">
-        <h2>Sitios de Interes</h2>
+      <h2>Hobbies</h2>
+      <div>
+        <h3>DJing</h3>
 
-        <div className="videos" id="videos">
-          <h3>Videos</h3>
+        <img
+          id="dekmantel pic"
+          className="img-fluid w-100"
+          src="./dekmantel-header.jpg"
+          alt="dekmantel header"
+        />
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+          Exercitationem deserunt esse quos totam illo impedit? Temporibus
+          fugiat corporis itaque veniam assumenda numquam labore esse a in,
+          ducimus nobis excepturi repellendus.Dolorum non atque esse eius
+          officiis commodi, aut perferendis, dolor distinctio ab illum
+          reiciendis vitae cum perspiciatis vel a? Dolorem voluptas tempore
+          dolor consectetur nostrum labore qui error et voluptate.
+        </p>
+        <h4>Some of my favorite dj sets</h4>
+        <div className="row">
           <iframe
+            className="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6"
             title="Call Super in the lab ldn"
             width="560"
             height="315"
             src="https://www.youtube.com/embed/j5SgdpXaHHo"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
+            allowFullScreen
           ></iframe>
           <iframe
+            className="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6"
             title="Seth Troxler for cercle"
             width="560"
             height="315"
             src="https://www.youtube.com/embed/C8iwk-iDHw8"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
+            allowFullScreen
           ></iframe>
           <iframe
+            className="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6"
             title="Kerri Chandler Reel-To-Reel Session"
             width="560"
             height="315"
             src="https://www.youtube.com/embed/YC7Mw8RjlXM"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
+            allowFullScreen
           ></iframe>
         </div>
       </div>
@@ -205,38 +232,75 @@ const hobbies = () => {
 const contact = () => {
   return (
     <footer className="footer" id="footer">
-      <p>
-        Email:
-        <a href="mailto:ma.hoyosr@uniandes.edu.co">ma.hoyosr@uniandes.edu.co</a>
-      </p>
-      <p>
-        Whatsapp:
-        <a href="https://wa.link/u2tg1m" target="blank">
-          +57 3102452958
-        </a>
-      </p>
+      <h3>Contact</h3>
+      <a href="mailto:ma.hoyosr@uniandes.edu.co">
+        <FontAwesomeIcon icon={faEnvelope} size="lg" />
+      </a>
+      <a href="https://wa.link/u2tg1m" target="blank">
+        <FontAwesomeIcon icon={faWhatsapp} size="lg" />
+      </a>
+      <a href="https://github.com/mitooos" target="blank">
+        <FontAwesomeIcon icon={faGithub} size="lg" />
+      </a>
     </footer>
   );
 };
 
 function App() {
+  const series = React.useMemo(
+    () => ({
+      type: "bar",
+    }),
+    []
+  );
+
+  const axes = React.useMemo(
+    () => [
+      { primary: true, type: "ordinal", position: "left" },
+      { position: "bottom", type: "linear", stacked: true },
+    ],
+    []
+  );
+
+  const data = React.useMemo(
+    () => [
+      {
+        label: "Skills",
+        data: [
+          ["Go", 70],
+          ["React", 35],
+          ["NodeJs", 65],
+          ["Swift/IOS", 45],
+          ["Angular", 80],
+          ["Python", 85],
+          ["Circleci", 60],
+          ["Kubernetes", 65],
+        ],
+      },
+    ],
+    []
+  );
+
   return (
-    <div className="container-flow">
+    <div className="contaier">
+      {navbar()}
       <header className="header text-center">
         <h1>Miguel Hoyos Ruge</h1>
       </header>
-      {navbar()}
 
-      {aboutMe()}
+      <div className="container-lg">
+        {aboutMe()}
 
-      {profile()}
+        {profile()}
 
-      {academic()}
+        {academic()}
 
-      {projects()}
+        {skills(data, series, axes)}
 
-      {hobbies()}
+        {projects()}
 
+        {hobbies()}
+      </div>
       {contact()}
     </div>
   );

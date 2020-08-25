@@ -1,3 +1,15 @@
+body {
+  background-color: black;
+  color: #d1d1d1;
+  font-family: "Tajawal", sans-serif;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 4;
+}
+
 .about-me {
   justify-content: center;
 }
@@ -8,7 +20,7 @@
   padding: 10px;
 }
 
-.bio-info > table {
+.bio-info {
   margin: auto;
   text-align: center;
 }
@@ -23,6 +35,32 @@
   clear: both;
 }
 
+.skills {
+  max-height: 400px;
+  margin-bottom: 70px;
+}
+
 .card {
   max-width: 18rem;
+}
+
+.hobbies {
+  margin-top: 20px;
+}
+
+#dekmantel-pic {
+  display: block;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.footer {
+  background-color: #343a40;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  padding: 5px;
+}
+
+.footer > a {
+  padding: 5px;
 }
