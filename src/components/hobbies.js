@@ -11,7 +11,7 @@ class Hobbies extends React.Component {
           <img
             id="dekmantel pic"
             className="img-fluid w-100"
-            src="./dekmantel-header.jpg"
+            src="./Dekmantel-header.jpg"
             alt="dekmantel header"
           />
           <h4>Some of my favorite dj sets</h4>

@@ -5,7 +5,7 @@ import Nav from "react-bootstrap/Nav";
 class Navigation extends React.Component {
   render() {
     return (
-      <Navbar bg="dark" variant="dark" expand="md">
+      <Navbar bg="dark" variant="dark" expand="sm">
         <Navbar.Brand href="#">MHR</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
