@@ -4,7 +4,14 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faWhatsapp, faGithub } from "@fortawesome/free-brands-svg-icons";
+import {
+  faWhatsapp,
+  faGithub,
+  faPython,
+  faReact,
+  faAws,
+  faJava,
+} from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 import { Chart } from "react-charts";
@@ -60,32 +67,43 @@ const profile = () => {
     <div className="profile" id="profile">
       <h2>Profile</h2>
       <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem
-        deserunt esse quos totam illo impedit? Temporibus fugiat corporis itaque
-        veniam assumenda numquam labore esse a in, ducimus nobis excepturi
-        repellendus.Dolorum non atque esse eius officiis commodi, aut
-        perferendis, dolor distinctio ab illum reiciendis vitae cum perspiciatis
-        vel a? Dolorem voluptas tempore dolor consectetur nostrum labore qui
-        error et voluptate.
+        Systems and computer engineer, passionate about software engineering,
+        electronic music and learning new things. Interested in full-stack
+        software developments, mobile development, blockchain, cloud and IoT.
+        Experience developing and designing web applications with CI/CD
+        pipelines and agile methodologies. High problem solving abilities with
+        ease of learning new technolgies autonomosly and eager to learn new soft
+        skills.
       </p>
 
       <h3>Experience</h3>
-      <dl>
-        <h4>Tecniruedas</h4>
-        <dt>Freelance fullstack developer</dt>
-        <dd>2018-Present</dd>
+      <h4>Tecniruedas</h4>
+      <h5>Freelance fullstack developer</h5>
+      <p>2018-Present</p>
+      <p>
+        Developed various products including an e-commerce solution using
+        Django-rest for the backend, Angular as the dront-end framework and a
+        Postgres databases. Also developed a CRM using a micorservice
+        architecture using Go, Node, Kubernetes, Circleci, Postgres and MongoDB
+        deployed in AWS using EKS, S3 and Cloudfront.
+      </p>
 
-        <h4>Suira</h4>
-        <dt>Fullstack developer</dt>
-        <dd>Aug 2019-Sep 2019 / Feb 2020-May 2020</dd>
-      </dl>
+      <h4>Suira</h4>
+      <h5>Fullstack developer</h5>
+      <p>Aug 2019-Sep 2019 / Feb 2020-May 2020</p>
+      <p>
+        Developed first and second versions, using Node and React for the first
+        with Mongo, and Django-rest, React and Postgres for the second version.
+        Both iterations where carried in a group of two using agile
+        methodologies.
+      </p>
     </div>
   );
 };
 
 const academic = () => {
   return (
-    <div className="academic" id="academic">
+    <div className="academic" id="academic-info">
       <h2>Academic info</h2>
       <dl>
         <dt>University</dt>
@@ -145,12 +163,23 @@ const projects = () => {
       <div className="card-deck">
         <div className="card bg-secondary">
           <div className="card-body">
-            <h5 className="card-title">Proyect 1</h5>
+            <h5 className="card-title">Suira</h5>
             <p className="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+              Web application developed in a team of two. Social network for
+              freelancers implmented in Django-rest and React backend deployed
+              in AWS using Elastic Beanstalk and frontend deployed in S3 and
+              Cloudfront from AWS.
             </p>
-            <a href="#" target="blank" className="btn btn-primary">
+            <p>
+              <FontAwesomeIcon icon={faPython} size="lg" />
+              <FontAwesomeIcon icon={faReact} size="lg" />
+              <FontAwesomeIcon icon={faAws} size="lg" />
+            </p>
+            <a
+              href="https://github.com/mitooos/Suira"
+              target="blank"
+              className="btn btn-primary"
+            >
               Repo
             </a>
           </div>
@@ -158,12 +187,19 @@ const projects = () => {
 
         <div className="card bg-secondary">
           <div className="card-body">
-            <h5 className="card-title">Proyect 2</h5>
+            <h5 className="card-title">Fabricas Grafos</h5>
             <p className="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+              Simple software product line implementing a graph library using
+              the factory design pattern to configure the variability.
             </p>
-            <a href="#" target="blank" className="btn btn-primary">
+            <p className="icons">
+              <FontAwesomeIcon icon={faJava} size="lg" />
+            </p>
+            <a
+              href="https://github.com/mitooos/FabricasSW-Grafos"
+              target="blank"
+              className="btn btn-primary"
+            >
               Repo
             </a>
           </div>
@@ -292,9 +328,13 @@ function App() {
           ["NodeJs", 65],
           ["Python", 85],
           ["Swift/IOS", 45],
+          ["Rust", 25],
           ["React", 35],
           ["Angular", 80],
+          ["Postgres", 70],
+          ["MongoDB", 70],
           ["Circleci", 60],
+          ["Docker", 80],
           ["Kubernetes", 65],
           ["AWS", 40],
         ],
