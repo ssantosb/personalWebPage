@@ -54,6 +54,14 @@ body {
   max-width: 100%;
 }
 
+.img-fluid {
+  margin-bottom: 20px !important;
+}
+
+.audios {
+  margin-top: 5px;
+}
+
 .footer {
   background-color: #343a40;
   border-top-right-radius: 10px;

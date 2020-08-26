@@ -20,6 +20,7 @@ const navbar = () => {
           <Nav.Link href="#profile">Profile</Nav.Link>
           <Nav.Link href="#academic-info">Academic info</Nav.Link>
           <Nav.Link href="#projects">Projects</Nav.Link>
+          <Nav.Link href="#skills">Skills</Nav.Link>
           <Nav.Link href="#hobbies">Hobbies</Nav.Link>
           <Nav.Link href="#footer">Contact</Nav.Link>
         </Nav>
@@ -130,7 +131,7 @@ const academic = () => {
 
 const skills = (data, series, axes) => {
   return (
-    <div className="skills">
+    <div className="skills" id="skills">
       <h2>Skills</h2>
       <Chart data={data} series={series} axes={axes} tooltip dark />
     </div>
@@ -185,15 +186,6 @@ const hobbies = () => {
           src="./dekmantel-header.jpg"
           alt="dekmantel header"
         />
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-          Exercitationem deserunt esse quos totam illo impedit? Temporibus
-          fugiat corporis itaque veniam assumenda numquam labore esse a in,
-          ducimus nobis excepturi repellendus.Dolorum non atque esse eius
-          officiis commodi, aut perferendis, dolor distinctio ab illum
-          reiciendis vitae cum perspiciatis vel a? Dolorem voluptas tempore
-          dolor consectetur nostrum labore qui error et voluptate.
-        </p>
         <h4>Some of my favorite dj sets</h4>
         <div className="row">
           <iframe
@@ -223,6 +215,34 @@ const hobbies = () => {
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           ></iframe>
+          <iframe
+            className="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6"
+            title="Darwin and re:ni | Boiler Room x Dekmantel 2019"
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/gMWUlpIPqg0"
+            frameBorder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </div>
+        <div className="audios">
+          <iframe
+            width="100%"
+            height="200"
+            scrolling="no"
+            frameBorder="no"
+            allow="autoplay"
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/855563641&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+          ></iframe>
+          <iframe
+            width="100%"
+            height="200"
+            scrolling="no"
+            frameBorder="no"
+            allow="autoplay"
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/751576990&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+          ></iframe>
         </div>
       </div>
     </div>
@@ -247,6 +267,7 @@ const contact = () => {
 };
 
 function App() {
+  // skills graph atributes
   const series = React.useMemo(
     () => ({
       type: "bar",
@@ -268,13 +289,14 @@ function App() {
         label: "Skills",
         data: [
           ["Go", 70],
-          ["React", 35],
           ["NodeJs", 65],
-          ["Swift/IOS", 45],
-          ["Angular", 80],
           ["Python", 85],
+          ["Swift/IOS", 45],
+          ["React", 35],
+          ["Angular", 80],
           ["Circleci", 60],
           ["Kubernetes", 65],
+          ["AWS", 40],
         ],
       },
     ],
