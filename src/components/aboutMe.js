@@ -4,8 +4,9 @@ class AboutMe extends React.Component {
   render() {
     return (
       <div className="about-me" id="about-me">
+        <!--Recomendacion: Utilizar bootstrap para volver esta imagen un poco mas responsive, pues el tamaño queda un poco desalineado para dispositivos pequeños--> 
         <h2>About me</h2>
-        <img id="profile-pic" src="./profile-picture.jpg" alt="profile" />
+         <img id="profile-pic" src="./profile-picture.jpg" alt="profile" />
         <div>
           <div className="bio-info">
             <dl>
